@@ -44,6 +44,9 @@ D. Строительство школы
         0
 """
 
-import math
 N = int(input().strip())
 
+for i, num in enumerate(map(int, input().strip().split(" "))):
+    if i == N // 2:
+        print(num)
+        break
