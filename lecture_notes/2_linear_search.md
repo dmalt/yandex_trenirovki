@@ -49,7 +49,7 @@ def findmax2(seq):
 ```
 
 Problem 5.
-==========
+---------
 
 Given seq of length N find min even number in seq
 or print -1 if it doesn't exist.
@@ -68,7 +68,7 @@ More universal is to use flag for meeting the first even number
 
 
 Problem 6.
-==========
+----------
 
 Given seq of words print the shortest words separated by space.
 
@@ -87,7 +87,7 @@ def shortwords(words):
 ```
 
 Problem 7.
-==========
+----------
 
 Array encodes landscape (columns of different height).
 After rain, find how much water is stuck in the landscape.
@@ -124,7 +124,7 @@ def isleflood(h):
 
 
 Problem 8
-=========
+---------
 
 Implement Run Length Encoding (RLE).
 If symbol isn't repeated, it doesn't change.
