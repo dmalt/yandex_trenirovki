@@ -9,7 +9,9 @@
 температуру. Если температура в комнате и так не больше желаемой, то он
 выключается.
 
-«heat» — нагрев. В этом режиме кондиционер может только увеличивать температуру. Если температура в комнате и так не меньше желаемой, то он выключается.
+«heat» — нагрев. В этом режиме кондиционер может только увеличивать
+температуру. Если температура в комнате и так не меньше желаемой, то он
+выключается.
 
 «auto» — автоматический режим. В этом режиме кондиционер может как увеличивать,
 так и уменьшать температуру в комнате до желаемой.
@@ -42,5 +44,20 @@
 """
 
 
-def read_input():
-    input_str = input()
+troom, tcond = map(int, input().strip().split())
+mode = input().strip()
+
+
+match mode:
+    case "freeze":
+        tfinal = tcond if troom > tcond else troom
+    case "heat":
+        tfinal = tcond if troom < tcond else troom
+    case "auto":
+        tfinal = tcond
+    case "fan":
+        tfinal = troom
+    case _:
+        raise ValueError("bad mode")
+
+print(tfinal)
